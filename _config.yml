@@ -83,8 +83,8 @@ author:
   name             : "Elias Ramzi"
   avatar           : "profile.png"
   bio              : "PhD student in Computer vision. Working on image retrieval with deep learning."
-  location         : "Paris, France"
-  employer         : "Le Cnam"
+  location         :
+  employer         : "Le Cnam, Paris France"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=mbfTD_UAAAAJ&hl=fr"
   email            : "elias.ramzi@lecnam.net"

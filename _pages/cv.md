@@ -11,27 +11,26 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Deep Learning, Le Cnam, 2021-2024 (expected)
-* Engineering degree, CentraleSupelec, 2016-2020
-* Preparatory classes, Lycée Lakanal, 2014-2016
+* Ph.D in Deep Learning, Le Cnam (France), 2021-2024 (expected)
+* Engineering degree, CentraleSupelec (France), 2016-2020
+* Preparatory classes, Lycée Lakanal (France), 2014-2016
 
 Work experience
 ======
-* 2021-present: Deep learning PhD student - Le Cnam
+* 2021-2024: Deep learning PhD student - Le Cnam, Paris - France
   * Image retrieval
   * Direct optimization of metrics
 
-* Mai to October 2020: Research intern in deep learning - Le Cnam, Paris
+* Mai to October 2020: Research intern in deep learning - Le Cnam, Paris - France
   * Semantic segmentation of medical 3D volumes, using a multi-view approach
   * Implementation of a 2D fully convolutional segmentation network: U-Net
   * Research on a confidence based fusion with a confidence measure learned by an auxiliary neural network based on ConfidNet
 
-* January to July 2019: Data engineer and data scientist - Sancare, Paris
+* January to July 2019: Data engineer and data scientist - Sancare, Paris - France
   * Data scientist (2 months): Implementing methods for the interpretability of a deep neural network.
-  * Data engineer (4 months): Developing data pipelines to extract data from hospitals’ IT system and structure them
-to Sancare’s data model.
+  * Data engineer (4 months): Developing data pipelines to extract data from hospitals’ IT system and structure them to Sancare’s data model.
 
-* July to December 2018: Data engineer - Balto, Sydney
+* July to December 2018: Data engineer - Balto, Sydney - Australia
 
 <!-- Skills
 ======
