@@ -13,16 +13,17 @@ redirect_from:
 I am a PhD student in deep learning at Consevatoire national des arts et métiers, Le Cnam, in Paris. I am supervised by Nicolas Thome (Sorbonne Université), Nicolas Audebert (Le Cnam) and Clément Rambour (Le Cnam).
 My thesis is co-financed by Coexya and my industrial supervisor is Xavier Bitot.
 I investigate deep learning approaches to image retrieval. Specifically, I work on designing appropriate losses to train deep neural networks to optimize ranking losses. I also contributed on collaborative filtering recommendation using graph neural networks and on OOD detection using energy-based models. I have started my PhD in January 2021 and it will end in January 2024.
-I have published three projects, ROADMAP at NeurIPS 2021, HAPPIER at ECCV 2022 and HEAT at ICML 2023.
+I have published three projects, ROADMAP at NeurIPS 2021, HAPPIER at ECCV 2022 and HEAT at ICML 2023. I have submitted an extension of ROADMAP and HAPPIER to TPAMI, which is under-review.
 
 <!-- A data-driven personal website
 ====== -->
 
 News
 ======
+* My pre-print submitted to TPAMI is now online at https://arxiv.org/abs/2309.08250.
 * I am going to ICML 2023. I will be presenting HEAT in a poster session.
 * I am participating to the Internation Computer Vision Summer School (ICVSS, 2023) this summer in Sicily.
-* I have participated in releasing the first of its kind hierarchical landmark retrieval dataset: available at https://github.com/cvdfoundation/google-landmark.
+* I have released the first of its kind hierarchical landmark retrieval dataset as a part of a TPAMI submission. It is available at https://github.com/cvdfoundation/google-landmark.
 * I am a reviewer for NeurIPS 2023.
 * I am going to ORASIS 2023. I will be presenting HAPPIER in a poster session.
 * Our paper on OOD detection, HEAT, using energy-based models has been accepted to ICML 2023.
