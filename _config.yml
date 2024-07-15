@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Elias Ramzi - PhD student"
+title                    : "Elias Ramzi - AI Research Scientist"
 title_separator          : "-"
 name                     : &name "Elias Ramzi"
-description              : &description "PhD student in Computer vision. Working on image retrieval with deep learning."
+description              : &description "AI Research Scientist."
 url                      : https://elias-ramzi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "elias-ramzi/elias-ramzi.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Elias Ramzi"
   avatar           : "profile.png"
-  bio              : "PhD student in Computer vision. Working on image retrieval with deep learning."
+  bio              : "AI Research Scientist."
   location         :
-  employer         : "Le Cnam, Paris France"
+  employer         : "Valeo.AI, Paris France"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=mbfTD_UAAAAJ&hl=fr"
-  email            : "elias.ramzi@lecnam.net"
+  email            : "elias.ramzi@valeo.com"
   researchgate     :  "https://www.researchgate.net/profile/Elias_Ramzi2"
   uri              :
   bitbucket        :
