@@ -83,8 +83,8 @@ author:
   name             : "Elias Ramzi"
   avatar           : "profile.png"
   bio              : "AI Research Scientist."
-  location         : "Paris, France"
-  employer         : "valeo.ai"
+  location         :
+  employer         : "valeo.ai - Paris, France"
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=mbfTD_UAAAAJ&hl=fr"
   email            : "elias.ramzi@valeo.com"
