@@ -19,6 +19,7 @@ I am a Research Scientist at valeo.ai. I am working on deep learning and compute
 
 News
 ======
+* Our code for GalLop is available online at [GalLop](https://github.com/MarcLafon/gallop)
 * I started at valeo.ai as a research scientist.
 * Our paper for local prompt learning, GalLoP, was accepted to ECCV 2024.
 * Our paper ITEM on improving the learning and evaluation of Message-Passing GNNs models in the recommendation task has been accepted at TMLR.
