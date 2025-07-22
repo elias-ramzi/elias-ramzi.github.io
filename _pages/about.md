@@ -18,12 +18,15 @@ I am a Research Scientist at valeo.ai. I am working on deep learning and compute
 ====== -->
 
 News
+
 ======
-* LLM-wrapper, which allows black-box fine-tuning of VLMs, has been accepted at ICLR 2025, congrats Amaia; [[paper]](https://arxiv.org/abs/2409.11919).
+
+* We have released a tech report and fully open-sourced code and weights for VaViM & VaVAM. This project builds a world model composed of a next frame predictor (VaVIM) and an action model (VaVAM);  [[paper]](https://arxiv.org/abs/2502.15672) [[code]](https://github.com/valeoai/VideoActionModel).
+* LLM-wrapper, which allows black-box fine-tuning of VLMs, has been accepted at ICLR 2025, congrats Amaia; [[paper]](https://arxiv.org/abs/2409.11919) [[code]](https://github.com/valeoai/LLM_wrapper).
 * SupRank is accepted at TPAMI, it is the first of its kind hierarchical landmark retrieval dataset; [[paper]](https://arxiv.org/abs/2309.08250) [[code]](https://github.com/elias-ramzi/SupRank) [[dataset]](https://github.com/cvdfoundation/google-landmark).
 <!-- * Our code for GalLop is available online at [GalLop](https://github.com/MarcLafon/gallop) -->
 * I started at valeo.ai as a research scientist.
-* Our paper for local prompt learning, GalLoP, has been accepted to ECCV 2024; [[paper]](https://arxiv.org/pdf/2407.01400) [[code]](https://github.com/MarcLafon/gallop).
+* Our paper for local prompt learning, GalLoP, has been accepted to ECCV 2024; [[paper]](https://arxiv.org/abs/2407.01400) [[code]](https://github.com/MarcLafon/gallop).
 * Our paper ITEM on improving the learning and evaluation of Message-Passing GNNs models in the recommendation task has been accepted at TMLR; [[paper]](https://arxiv.org/abs/2407.07912).
 * I defended my PhD thesis on the 20th of March. I now officialy hold a PhD 🎉 [[manuscript]](https://elias-ramzi.github.io/files/pdf/manuscrit_these_elias_ramzi_final.pdf).
 <!-- * My pre-print submitted to TPAMI is now online; it contains the first of its kind hierarchical landmark retrieval dataset -->
@@ -42,8 +45,8 @@ News
 <!-- * I will be presenting our ROADMAP paper at RFIAP 2022. -->
 * Our paper on ranking metric optimization for image retrieval, ROADMAP, has been accepted to NeurIPS 2021; [[paper]](https://arxiv.org/abs/2110.01445) [[code]](https://github.com/elias-ramzi/ROADMAP).
 
-
 Publications
+
 ======
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
