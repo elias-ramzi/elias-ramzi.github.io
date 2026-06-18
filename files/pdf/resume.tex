@@ -1,0 +1,244 @@
+\documentclass[11pt,a4paper,roman]{moderncv}
+
+\moderncvstyle{banking}
+\moderncvcolor{blue}
+\nopagenumbers{}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usepackage{url}
+\usepackage{amsmath}
+
+\usepackage[scale=0.84]{geometry}
+\usepackage{multicol}
+
+\usepackage{import}
+
+\name{\href{https://elias-ramzi.github.io/}{Elias Ramzi}}{\color{gray} | \LARGE{ AI Research Scientist} }
+\address{Paris, France}{}{}
+
+\newcommand*{\customcventry}[7][.25em]{
+  \begin{tabular}{@{}l}
+    {\bfseries #4}
+  \end{tabular}
+  \hfill%
+  \begin{tabular}{l@{}}
+     {\bfseries #5}
+  \end{tabular} \\
+  \begin{tabular}{@{}l}
+    {\itshape #3}
+  \end{tabular}
+  \hfill%
+  \begin{tabular}{l@{}}
+     {\itshape #2}
+  \end{tabular}
+  \ifx&#7&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#7%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+  \begin{tabular}{@{}l}
+    {\bfseries #2}
+  \end{tabular}
+  \hfill%
+  \begin{tabular}{l@{}}
+     {\itshape #3}
+  \end{tabular}
+  \ifx&#4&%
+  \else{\\%
+    \begin{minipage}{\maincolumnwidth}%
+      \small#4%
+    \end{minipage}}\fi%
+  \par\addvspace{#1}}
+
+\newcommand*{\skillgroup}[2]{%
+  \par\addvspace{.5em}{\bfseries #1}\par\nopagebreak
+  {\small #2}\par\addvspace{.3em}}
+
+\setlength{\tabcolsep}{12pt}
+\setlength{\emergencystretch}{3em}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{%
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1)
+                --++ (-0, 1.2)
+                --++ (0.6, 0)
+                --++ (0, -0.6)
+                --++ (0.6, 0)
+                --++ (0, -1);
+            \path[draw,
+                line width = 0.5,
+                rounded corners=0.5]
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5)
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1)
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+\begin{document}
+
+\makecvtitle
+\vspace*{-23mm}
+
+\begin{center}
+\begin{tabular}{ c c c c }
+ \faEnvelopeO\enspace \href{mailto:elias.ramzi@gmail.com}{elias.ramzi@gmail.com} & \faMobile\enspace+33\enspace6 28 25 40 88 &    \faGithub\enspace \href{https://elias-ramzi.github.io/}{elias-ramzi} & \faGraduationCap\enspace \href{https://scholar.google.com/citations?user=mbfTD_UAAAAJ}{Google Scholar} \\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\textbf{End-to-end driving --- planning, world models, and multimodal LLMs}
+\end{center}
+
+
+\section{Experiences}
+
+{\customcvproject{valeo.ai (Paris, France) - full-time}{2024-}{
+\textit{AI research scientist}\\
+Deep learning research interests: end-to-end planning, world models, VLMs / LLMs.
+\medbreak
+\begin{itemize}
+\item Developed world models for autonomous driving, leading to VaViM/VaVAM (technical report, CoRL Workshop).
+\medbreak
+\item Co-supervising two PhD students: one on LLMs and VLMs (ICLR 2025, ACL Findings 2026), another on world models and RL.
+\medbreak
+\item Scaled training of generative models up to 1.9B parameters across 192 H100s using $\mu$P and DeepSpeed ZeRO-2.
+\medbreak
+\end{itemize}
+}
+
+{\customcvproject{Cnam \& Coexya (Paris, France) - 3 year PhD}{2021-2024}{
+\textit{PhD student}\\
+PhD focused on computer vision and image retrieval:
+\medbreak
+\begin{itemize}
+    \item Designed novel ranking losses for image retrieval, combining theoretical analysis with large-scale experiments.
+    \medbreak
+    \item Published four papers in major international machine learning conferences (NeurIPS, ECCV$\times$2, ICML), three of which as first author, and 2 papers in journals (TPAMI, TMLR).
+    \medbreak
+    \item Transferred HAPPIER (ECCV) to trademark logo retrieval; the resulting models were deployed in production in Coexya's Acsepto product in 2024.
+    \medbreak
+    \item Ran distributed training experiments across up to 16 GPUs on France's Jean Zay HPC cluster.
+    \medbreak
+\end{itemize}}
+}
+
+{\customcvproject{Cnam (Paris, France) - 5 month internship}{2020}{
+\textit{Research intern}\\Deep learning for 3D medical image segmentation. I used a learned confidence measure (ConfidNet) to combine segmentation results from different 2D U-Nets.
+}
+
+{\customcvproject{Sancare (Paris, France) - 6 month internship}{2019}{\textit{Data engineer and data scientist intern}
+}
+
+ {\customcvproject{Balto (Sydney, Australia) - 6 month internship}{2018}{\textit{Data engineer intern}
+ }}
+
+
+\section{Education}
+{\customcvproject{PhD in Computer Science, Cnam \& Coexya (France)}{2021-2024}
+  {Ranking losses and hierarchical learning for image retrieval.
+  Awarded the ``Prix de Thèse'' by \href{http://afrif.irisa.fr/?page_id=54}{AFRIF \ExternalLink} (June 2025). 6 publications including 4 first-author papers.
+  \\Supervisor: \href{https://thome.isir.upmc.fr}{Nicolas Thome \ExternalLink} (Sorbonne Université).
+  \\Advisors: \href{https://nicolas.audebert.at/}{Nicolas Audebert \ExternalLink} (IGN); \href{https://clementrambour.github.io}{Clément Rambour \ExternalLink} (Sorbonne Université).
+  \\Industrial advisor: \href{https://orcid.org/0009-0006-7254-6178}{Xavier Bitot \ExternalLink} (Coexya).
+  }
+}
+{\customcvproject{Engineering diploma, CentraleSupélec (France)}{2016-2020}
+  {Courses in signal processing (sound, image, speech), machine learning, statistical models (estimators, Bayesian learning), data science (data mining, sparse data representation, NLP).}
+}
+
+
+\section{Technical skills}
+\skillgroup{Open source projects}{
+   \begin{itemize}
+   \setlength{\itemsep}{0pt}
+   \item Reproduce VaViM and VaVAM (CoRL'25): \href{https://github.com/valeoai/VideoActionModel/}{\faGithub\enspace VideoActionModel}
+   \item Global and local prompts for VLMs (ECCV'24): \href{https://github.com/MarcLafon/gallop/}{\faGithub\enspace GalLoP}
+   \item Out-of-distribution detection with HEAT (ICML'23): \href{https://github.com/MarcLafon/heatood/}{\faGithub\enspace HEAT}.
+   \item Hierarchical landmark dataset (TPAMI): \href{https://github.com/cvdfoundation/google-landmark}{\faGithub\enspace google-landmark} \& \href{https://github.com/elias-ramzi/SupRank}{\faGithub\enspace SupRank}.
+   \item Hierarchical image retrieval with HAPPIER (ECCV'22): \href{https://github.com/elias-ramzi/HAPPIER}{\faGithub\enspace HAPPIER}.
+   \item Image retrieval with ROADMAP (NeurIPS'21): \href{https://github.com/elias-ramzi/ROADMAP}{\faGithub\enspace ROADMAP}.
+ \end{itemize}}
+
+\skillgroup{Technologies}{
+   \begin{itemize}
+   \setlength{\itemsep}{0pt}
+   \item  {My programming language:} Python -- PyTorch, Lightning, NumPy, Hydra, Pandas, Scikit-learn.
+   \item  {My work environment :} Linux/macOS + Git + VS Code \& claude-code.
+   \item Other tools: \LaTeX, Shell script, SLURM, HyperQueue, Nextflow.
+ \end{itemize}}
+
+\skillgroup{Contributions to open-source}{
+   \begin{itemize}
+   \item PyTorch metric learning: \href{https://github.com/KevinMusgrave/pytorch-metric-learning/pull/303}{\faGithub\enspace pytorch-metric-learning}.
+   \item Implementation of Mixture of Experts: \href{https://github.com/davidmrau/mixture-of-experts/pull/14}{\faGithub\enspace mixture-of-experts}.
+   \item PyTorch-Lightning: \href{https://github.com/Lightning-AI/lightning/pull/2319}{\faGithub \enspace lightning}.
+   \item Universal Image Embeddings: \href{https://github.com/nikosips/Universal-Image-Embeddings/tree/master\#acknowledgements}{\faGithub \enspace  Universal-Image-Embeddings}.
+ \end{itemize}}
+
+
+\section{Miscellaneous}
+
+\begin{itemize}
+    \item French is my mother tongue and I speak English at C1 level.
+    \medbreak
+    \item I enjoy (trail) running, biking and back-country skiing.
+\end{itemize}
+
+
+ \section{Publications}
+
+Yihong Xu, {\'E}loi Zablocki, Yuan Yin, \textbf{Elias Ramzi}, Ellington Kirby, Alexandre Boulch, Matthieu Cord. "TOAD: Test-Time Trajectory Optimization for Autonomous Driving." \textit{arXiv preprint}, 2026. online: \href{https://arxiv.org/abs/2606.07170}{arxiv.org/abs/2606.07170}
+
+ \medbreak
+
+Shashanka Venkataramanan, Valentinos Pariza, Mohammadreza Salehi, Lukas Knobel, Spyros Gidaris, \textbf{Elias Ramzi}, Andrei Bursuc, Yuki M. Asano, "Franca: Nested Matryoshka Clustering for Scalable Visual Representation Learning." \textit{CVPR}, 2026. online: \href{https://arxiv.org/abs/2507.14137}{arxiv.org/abs/2507.14137}
+
+ \medbreak
+
+ Amaia Cardiel, {\'E}loi Zablocki, \textbf{Elias Ramzi}, and Eric Gaussier. "DRIV-EX: Counterfactual Explanations for Driving LLMs." \textit{ACL findings}, 2026. online: \href{https://arxiv.org/abs/2603.00696}{arxiv.org/abs/2603.00696}
+
+  \medbreak
+
+ Florent Bartoccioni, \textbf{Elias Ramzi}, \textit{et al.} "VaViM and VaVAM: Autonomous Driving through Video Generative Modeling" \textit{Technical report \& CoRL workshop}, 2025. online: \href{https://arxiv.org/abs/2502.15672}{arxiv.org/abs/2502.15672}
+
+\medbreak
+
+Amaia Cardiel, {\'E}loi Zablocki, \textbf{Elias Ramzi}, Oriane Sim{\'e}oni, and Matthieu Cord. "LLM-wrapper: Black-Box Semantic Aware Adaptation of Vision-Language Models for Referring Expression Comprehension." \textit{ICLR}, 2025. online: \href{https://arxiv.org/abs/2409.11919}{arxiv.org/abs/2409.11919}
+
+  \medbreak
+
+     \textbf{Elias Ramzi}, Nicolas Audebert, Cl{\'e}ment Rambour, Andr{\'e} Araujo, Xavier Bitot and Nicolas Thome. "Optimization of Rank Losses for Image Retrieval." \textit{TPAMI}, 2025. online: \href{https://arxiv.org/abs/2309.08250}{arxiv.org/abs/2309.08250}
+
+\medbreak
+
+ Marc Lafon, \textbf{Elias Ramzi}, Cl{\'e}ment Rambour, Nicolas Audebert, Nicolas Thome. "GalLoP: Learning Global and Local Prompts for Vision-Language Models." \textit{ECCV}, 2024. online: \href{https://arxiv.org/abs/2407.01400}{arxiv.org/abs/2407.01400}
+
+ \medbreak
+
+Yannis Karmim, \textbf{Elias Ramzi}, Raphaël Fournier S’niehotta, and Nicolas Thome. "ITEM: Improving Training and Evaluation of Message-Passing based GNNs for top-k recommendation." \textit{TMLR}, 2024. online: \href{https://arxiv.org/abs/2407.07912}{arxiv.org/abs/2407.07912}
+
+ \medbreak
+
+  Marc Lafon, \textbf{Elias Ramzi}, Cl{\'e}ment Rambour, Nicolas Thome. "Hybrid Energy Based Model in the Feature Space for Out-of-Distribution Detection." \textit{ICML}, 2023. online: \href{https://arxiv.org/abs/2305.16966}{arxiv.org/abs/2305.16966}
+
+  \medbreak
+
+ \textbf{Elias Ramzi}, Nicolas Audebert, Nicolas Thome, Cl{\'e}ment Rambour, and Xavier Bitot. "Hierarchical Average Precision Training for Pertinent Image Retrieval." \textit{ECCV}, 2022. online: \href{https://arxiv.org/abs/2207.04873}{arxiv.org/abs/2207.04873}
+
+\medbreak
+
+ \textbf{Elias Ramzi}, Nicolas Thome, Cl{\'e}ment Rambour, Nicolas Audebert, and Xavier Bitot. "Robust and Decomposable Average Precision for Image Retrieval." \textit{NeurIPS}, 2021. online: \href{https://arxiv.org/abs/2110.01445}{arxiv.org/abs/2110.01445}
+
+
+\end{document}
