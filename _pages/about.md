@@ -10,9 +10,9 @@ redirect_from:
 
 {% include base_path %}
 
-I am a Research Scientist at valeo.ai. I am working on deep learning and computer vision. I obtained a PhD in computer vision at Cnam under the superivion of Nicolas Thome (Sorbonne Université), Nicolas Audebert (IGN) and Clément Rambour (Cnam).
+I am a Research Scientist at valeo.ai, where I work on deep learning for autonomous driving. My research focuses on end-to-end driving — learning to plan directly from sensor data — together with the world models that predict how a scene will unfold and the vision-language models and LLMs used for reasoning and explainability. Recent work includes [VaViM & VaVAM](https://arxiv.org/abs/2502.15672), a video world model and action model for driving. I also co-supervise two PhD students, one on LLMs/VLMs and one on world models and reinforcement learning.
 
-<!-- I recently receive a PhD in deep learning at Consevatoire national des arts et métiers (Cnam), in Paris. My PhD was supervised by Nicolas Thome (Sorbonne Université), Nicolas Audebert (IGN) and Clément Rambour (Cnam). My PhD was co-financed by Coexya and my industrial supervisor was Xavier Bitot (Coexya). I investigated deep learning approaches to image retrieval. Specifically, I worked on designing appropriate losses to train deep neural networks to optimize ranking losses. I also contributed on collaborative filtering recommendation using graph neural networks and on OOD detection using energy-based models. During my PhD I have published three projects, ROADMAP at NeurIPS 2021, HAPPIER at ECCV 2022 and HEAT at ICML 2023. I have submitted an extension of ROADMAP and HAPPIER to TPAMI, which is under-review. I am now actively looking for full-time or post-doc position, ideally starting at the end of the summer or in september. -->
+Before joining valeo.ai, I earned a PhD in computer vision at Cnam, supervised by Nicolas Thome (Sorbonne Université), Nicolas Audebert (IGN) and Clément Rambour (Cnam), with Xavier Bitot (Coexya) as industrial advisor. My thesis — awarded the AFRIF Prix de Thèse — focused on ranking-loss optimization and hierarchical learning for image retrieval (ROADMAP, HAPPIER, SupRank).
 
 <!-- A data-driven personal website
 ====== -->
