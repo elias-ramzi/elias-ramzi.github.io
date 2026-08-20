@@ -55,3 +55,12 @@ python talks.py          # reads talks.tsv -> writes ../_talks/*.md
 ```
 
 `talkmap.py` / `talkmap.ipynb` build the geographic talk map from talk locations.
+
+## Context files
+
+- `.claude/context/resume_elias_ramzi.tex` — LaTeX source of the CV. Reference
+  material only: it is not part of the site build (Jekyll skips dot-directories).
+  The published PDF is `files/pdf/resume_elias_ramzi.pdf`, embedded by
+  `_pages/cv.md`. It is compiled through the web-latex-mcp MCP server (project
+  id `resume`), which builds from a clone of the *committed* state — commit, then
+  `project_sync`, before compiling.
