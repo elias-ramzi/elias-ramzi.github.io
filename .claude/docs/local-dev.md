@@ -69,20 +69,50 @@ every entry in `_publications/`.
 The CV source is `.claude/context/resume_elias_ramzi.tex`; the published PDF is
 `files/pdf/resume_elias_ramzi.pdf`, embedded by `_pages/cv.md`.
 
-### One-time registration
+**Check the server version first — the workflow differs.** `server_info()`
+reports it. This machine ran **0.4.0** when these notes were written;
+[PR #31](https://github.com/elias-ramzi/WebLatexMCP/pull/31) (release 0.5.0,
+open at the time of writing) removes most of the friction below.
 
-The MCP server is registered with project id **`resume`**, pointing at this repo
-as its git remote with `rootFile: .claude/context/resume_elias_ramzi.tex`:
+### On 0.5.0 and later: register it as a local project
+
+`register_project({ project: "resume", path: "<repo>/.claude/context" })`
+registers a **directory** instead of a git remote. Nothing is cloned and nothing
+is copied: `read_file`, `write_file`, `edit_file` and `compile` act on the real
+working-tree file. No commit-then-sync dance — edit, compile, done. Build
+artifacts (including the PDF) go to the workspace, never beside the source.
+
+Consequences to expect:
+
+- Every git tool (`status`, `diff`, `commit`, `push`, `discard`, `project_sync`,
+  `reset_to_remote`, `read_file` with a `ref`) **refuses** a local project by
+  design — the only repo around is this one, and the server will not commit to
+  it on your behalf. Use plain `git` in the shell for that.
+- The confirmation diff on `write_file`/`edit_file` returns nothing.
+- `compile` failures carry **`missingPackages`** plus a `hint` with the install
+  command, so there is no need to regex the log (see fontawesome below).
+- **`doctor()`** reports the whole toolchain — compiler, engines, distribution,
+  package manager, texmf writability — in one call. Run it before debugging a
+  machine-level failure. On this box it flags TeX Live 2019 as past end of life
+  and `tlmgr` as pointing at a frozen archive, which is the root cause of the
+  package-install problem described below.
+- **`list_skills()`** exposes the server's bundled skills (citation
+  verification, arXiv cleaning, formatting) to the agent.
+
+Migration when 0.5.0 lands: re-register `resume` with `path`, then delete the
+stale clone at `.web_latex_mcp/resume`.
+
+### On 0.4.0: the clone-based workflow
+
+Registered with the repo itself as the git remote:
 
 ```
 register_project(project="resume", gitUrl="/home/eramzi/workspace/elias-ramzi.github.io",
                  rootFile=".claude/context/resume_elias_ramzi.tex")
 ```
 
-### The important gotcha
-
-The server works from a **clone** in `.web_latex_mcp/resume`, not from the
-working tree. It therefore only ever sees **committed** state. The loop is:
+The server then works from a **clone** in `.web_latex_mcp/resume`, not from the
+working tree, so it only ever sees **committed** state. The loop is:
 
 1. edit `.claude/context/resume_elias_ramzi.tex` in the working tree
 2. `git commit`
@@ -92,23 +122,33 @@ working tree. It therefore only ever sees **committed** state. The loop is:
 
 Skipping step 2 or 3 silently compiles the previous version. If a rebase or
 amend rewrites history, the clone diverges — `rm -rf .web_latex_mcp/resume` and
-`project_sync(mode="clone")`.
+`project_sync(mode="clone")`. Never use the server's `edit_file`/`write_file`
+here: they would write to the clone, leaving two copies of the CV to drift
+apart. Edit the working-tree file directly.
+
+The clone dir is added to `.git/info/exclude` by the server (0.5.0 says so in
+the `register_project`/`server_info` result); it is also in `.gitignore` here.
+
+### The viewer
 
 `viewer(project="resume", target="vscode")` returns a localhost URL for the
 pdf.js viewer, which hot-reloads on each compile. The port changes when the
-server restarts, so re-run it rather than reusing an old URL.
+server restarts, so re-run it rather than reusing an old URL. An agent cannot
+open the Simple Browser tab itself — hand the URL to the user. (PR #31 confirms
+this is not fixable: no `code` CLI flag exists for it.)
 
 ### fontawesome
 
 The document needs `fontawesome.sty`, which is not in this machine's TeX Live
 2019 and cannot be installed with `tlmgr`: system-wide needs sudo, and
 `tlmgr --usermode` fails because the configured repository (a 2019 historic
-mirror) is unreachable. It is already installed by hand under `~/texmf` in TDS
-layout — `.sty`/`.tex`/`.fd` in `tex/latex/fontawesome/`, fonts under
-`fonts/{tfm,type1,opentype}/public/fontawesome/`, `fonts/enc/dvips/fontawesome/`,
-`fonts/map/dvips/fontawesome/` — followed by `mktexlsr ~/texmf` and
-`updmap-user --enable Map=fontawesome.map`. Repeat that recipe for any other
-missing package.
+mirror) is unreachable — `doctor()` reports exactly this on 0.5.0. It is already
+installed by hand under `~/texmf` in TDS layout — `.sty`/`.tex`/`.fd` in
+`tex/latex/fontawesome/`, fonts under `fonts/{tfm,type1,opentype}/public/fontawesome/`,
+`fonts/enc/dvips/fontawesome/`, `fonts/map/dvips/fontawesome/` — followed by
+`mktexlsr ~/texmf` and `updmap-user --enable Map=fontawesome.map`. Repeat that
+recipe for any other missing package; copy **all** of `.sty`, `.tex` and `.fd`,
+not just the `.sty`. There is deliberately no `install_package` tool.
 
 ### Keeping the CV to two pages
 
