@@ -56,6 +56,13 @@ python talks.py          # reads talks.tsv -> writes ../_talks/*.md
 
 `talkmap.py` / `talkmap.ipynb` build the geographic talk map from talk locations.
 
+## Local development
+
+`.claude/docs/local-dev.md` — how to serve the site locally (the repo Gemfile
+does not resolve on this machine's Ruby 2.7; use the pinned Gemfile workaround)
+and how to compile the CV through the web-latex-mcp server. Read it before
+trying either.
+
 ## Context files
 
 - `.claude/context/resume_elias_ramzi.tex` — LaTeX source of the CV. Reference

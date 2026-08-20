@@ -5,3 +5,4 @@ Gemfile.lock
 
 .web_latex_mcp/
 tmp/
+.sass-cache/

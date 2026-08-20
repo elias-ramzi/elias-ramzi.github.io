@@ -10,7 +10,7 @@ redirect_from:
 
 {% include base_path %}
 
-I am a Research Scientist at valeo.ai, where I work on deep learning for autonomous driving. My research focuses on end-to-end driving — learning to plan directly from sensor data — together with the world models that predict how a scene will unfold and the vision-language models and LLMs used for reasoning and explainability. Recent work includes [VaViM & VaVAM](https://arxiv.org/abs/2502.15672), a video world model and action model for driving. I also co-supervise two PhD students, one on LLMs/VLMs and one on world models and reinforcement learning.
+I am a Research Scientist at valeo.ai, working on deep learning for autonomous driving. My main focus is end-to-end driving: learning to plan directly from sensor data. Around it I work on world models that predict how a scene will unfold, on self-play in simulation, and on vision-language models for reasoning and explainability. Recent projects include [Pictura](https://valeoai.github.io/Pictura/), a simulator for training driving policies by self-play in the perspective view, and [VaViM & VaVAM](https://arxiv.org/abs/2502.15672), a video world model and its action model. I also co-supervise two PhD students, one on LLMs/VLMs and one on world models and reinforcement learning.
 
 Before joining valeo.ai, I earned a PhD in computer vision at Cnam, supervised by Nicolas Thome (Sorbonne Université), Nicolas Audebert (IGN) and Clément Rambour (Cnam), with Xavier Bitot (Coexya) as industrial advisor. My thesis — awarded the AFRIF Prix de Thèse — focused on ranking-loss optimization and hierarchical learning for image retrieval (ROADMAP, HAPPIER, SupRank).
 
