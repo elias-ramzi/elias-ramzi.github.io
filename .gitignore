@@ -2,3 +2,6 @@ _site/
 
 Gemfile.lock
 .DS_Store
+
+.web_latex_mcp/
+tmp/
