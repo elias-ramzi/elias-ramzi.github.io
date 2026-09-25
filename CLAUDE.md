@@ -59,9 +59,9 @@ python talks.py          # reads talks.tsv -> writes ../_talks/*.md
 ## Local development
 
 `.claude/docs/local-dev.md` — how to serve the site locally (the repo Gemfile
-does not resolve on this machine's Ruby 2.7; use the pinned Gemfile workaround)
-and how to compile the CV through the web-latex-mcp server. Read it before
-trying either.
+does not resolve on either machine's Ruby; the workaround differs between macOS
+and Linux) and how to compile the CV through the web-latex-mcp server. Read it
+before trying either.
 
 ## Context files
 
@@ -69,5 +69,6 @@ trying either.
   material only: it is not part of the site build (Jekyll skips dot-directories).
   The published PDF is `files/pdf/resume_elias_ramzi.pdf`, embedded by
   `_pages/cv.md`. It is compiled through the web-latex-mcp MCP server (project
-  id `resume`), which builds from a clone of the *committed* state — commit, then
-  `project_sync`, before compiling.
+  id `resume`). On server 0.5.0+ it is a local project compiled in place; on
+  older servers it builds from a clone of the *committed* state (commit, then
+  `project_sync`). See `local-dev.md`.
