@@ -16,7 +16,6 @@
 
 % character encoding
 \usepackage[utf8]{inputenc}
-\usepackage{fontawesome}
 \usepackage{tabularx}
 \usepackage{ragged2e}
 \usepackage{tikz}
@@ -118,11 +117,11 @@
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
-\vspace*{-23mm}
+\vspace*{-15mm}
 
 \begin{center}
 \begin{tabular}{ c c c c }
- \faEnvelopeO\enspace \href{mailto:elias.ramzi@gmail.com}{elias.ramzi@gmail.com} & \faMobile\enspace+33\enspace6 28 25 40 88 &    \faGithub\enspace \href{https://elias-ramzi.github.io/}{elias-ramzi} & \faGraduationCap\enspace \href{https://scholar.google.com/citations?user=mbfTD_UAAAAJ}{Google Scholar} \\
+ \faEnvelope[regular]\enspace \href{mailto:elias.ramzi@gmail.com}{elias.ramzi@gmail.com} & \faMobile\enspace+33\enspace6 28 25 40 88 &    \faGithub\enspace \href{https://elias-ramzi.github.io/}{elias-ramzi} & \faGraduationCap\enspace \href{https://scholar.google.com/citations?user=mbfTD_UAAAAJ}{Google Scholar} \\
 \end{tabular}
 \end{center}
 
@@ -162,22 +161,22 @@ PhD focused on computer vision and image retrieval:
 \textit{Research intern}\\Deep learning for 3D medical image segmentation. I used a learned confidence measure (ConfidNet) to combine segmentation results from different 2D U-Nets.
 }
 
-{\customcvproject{Sancare (Paris, France) - 6 month internship}{2019}{\textit{Data engineer and data scientist intern}
-%Deep learning applied to healthcare. I participated in the development of a data pipeline to extract data from the hospitals' servers to Sancare's data model. I worked on the interpretability of a deep neural network using the layer-wise relevance propagation.
-}
-
- {\customcvproject{Balto (Sydney, Australia) - 6 month internship}{2018}{\textit{Data engineer intern}
- %Startup working on last mile delivery of fresh food. I worked on the automation of data processing.
-   % \begin{itemize}
-   % \item  Implementing software :
-   % \begin{itemize}
-   %   \item  Python libraries to create, edit and send contractors and clients' invoices (\textasciitilde600 AUD\$ per week).
-   %   \item Python libraries creating optimised delivery itineraries (\textasciitilde200 itineraries per week).
-   %   \item Integration of those libraries to a graphical interface.
-   % \end{itemize}
-   % \item Pipeline to automate the detection of street numbers on images (this project was not finished during my internship).
- % \end{itemize}
- }}
+%{\customcvproject{Sancare (Paris, France) - 6 month internship}{2019}{\textit{Data engineer and data scientist intern}
+%%Deep learning applied to healthcare. I participated in the development of a data pipeline to extract data from the hospitals' servers to Sancare's data model. I worked on the interpretability of a deep neural network using the layer-wise relevance propagation.
+%}
+%
+% {\customcvproject{Balto (Sydney, Australia) - 6 month internship}{2018}{\textit{Data engineer intern}
+% %Startup working on last mile delivery of fresh food. I worked on the automation of data processing.
+%   % \begin{itemize}
+%   % \item  Implementing software :
+%   % \begin{itemize}
+%   %   \item  Python libraries to create, edit and send contractors and clients' invoices (\textasciitilde600 AUD\$ per week).
+%   %   \item Python libraries creating optimised delivery itineraries (\textasciitilde200 itineraries per week).
+%   %   \item Integration of those libraries to a graphical interface.
+%   % \end{itemize}
+%   % \item Pipeline to automate the detection of street numbers on images (this project was not finished during my internship).
+% % \end{itemize}
+% }}
 
 
 \section{Education}
@@ -190,7 +189,7 @@ PhD focused on computer vision and image retrieval:
   }
 }
 {\customcvproject{Engineering diploma, CentraleSupélec (France)}{2016-2020}
-  {Courses in signal processing (sound, image, speech), machine learning, statistical models (estimators, Bayesian learning), data science (data mining, sparse data representation, NLP).}
+  {Courses in signal processing, machine learning, statistical models, data science.}
 }
 
 %{\customcvproject{Preparatory school, PSI*, Lycée Lakanal (France)}{2014-2016}
@@ -202,7 +201,8 @@ PhD focused on computer vision and image retrieval:
 \skillgroup{Open source projects}{
    \begin{itemize}
    \setlength{\itemsep}{0pt}
-   \item Pictura simulator: \href{https://github.com/valeoai/Pictura/}{\faGithub\enspace Pictura}
+   \item Pictura simulator (ECCVw'26): \href{https://github.com/valeoai/Pictura/}{\faGithub\enspace Pictura}
+   \item Scaling laws for driving video diffusion models (ECCVw'26): \href{https://github.com/valeoai/VATIX/}{\faGithub\enspace VATIX}
    \item Overleaf MCP server: \href{https://github.com/elias-ramzi/WebLatexMCP/}{\faGithub\enspace WebLatexMCP}
    \item Reproduce VaViM and VaVAM (CoRL'25): \href{https://github.com/valeoai/VideoActionModel/}{\faGithub\enspace VideoActionModel}
    \item Global and local prompts for VLMs (ECCV'24): \href{https://github.com/MarcLafon/gallop/}{\faGithub\enspace GalLoP}
@@ -238,6 +238,10 @@ PhD focused on computer vision and image retrieval:
  \section{Publications}
 
 Yuan Yin, \textbf{Elias Ramzi}, Marc Lafon, Valentin Charraut, Victor Bares, Yihong Xu, {\'E}loi Zablocki, Alexandre Boulch, Thibault Buhet, Andrei Bursuc, \textit{et al.} \href{https://arxiv.org/abs/2607.26005}{"Pictura: Perspective-View Self-Play at Scale for Driving."} \textit{ECCVw}, 2026.
+
+ \smallskip
+
+Victor Besnier, Anh-Quan Cao, \textbf{Elias Ramzi}, Spyros Gidaris, Tuan-Hung Vu, Andrei Bursuc, {\'E}loi Zablocki, Matthieu Cord. \href{https://openreview.net/forum?id=V33on0TguP}{"How Far Can 5,500 Hours of Driving Take You? A Scaling Law Analysis of Video Diffusion Models."} \textit{ECCVw}, 2026.
 
  \smallskip
 
